@@ -7,3 +7,4 @@ Experiments in language design.
 [io1](io1.md) | Unified simple function syntax for a Python-esque language. | `done`
 [io2](io2.md) | Minimal full language using ideas from **io1** and **minet**. | `done`
 [io3](io3.md) | Rethink. | `active`
+[io4](io4.md) | Function definition and calling conventions. | `active`
