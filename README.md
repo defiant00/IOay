@@ -9,3 +9,4 @@ Experiments in language design.
 | [io3](io3.md) | Rethink. | `active`
 | [io4](io4.md) | Function definition and calling conventions. | `active`
 | [io5](io5.md) | Parser experiments. | `active`
+| [io6](io6.md) | Program simplification. | `active`

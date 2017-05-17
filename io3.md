@@ -25,3 +25,20 @@ Being able to easily create glue functions with `{` `}` is pretty neat, and coul
 ### Use a Value Multiple Times
 ### Execute a Number of Times
 ### Execute on Each Item of a List
+```
+for i in list
+
+for i in [0..10]
+
+for i in [0,2..10]
+```
+### Lists
+```
+arr = [1,2,3]
+arr = [0..500]
+arr += 7
+arr -= 5
+arr[2] = 12
+arr[2..4] = [1,2,3]
+str[0..4] = "hello"
+```
