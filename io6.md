@@ -2,9 +2,9 @@
 
 * Data flow programming, defining data transformation steps instead of specific programming instructions.
 * Everything's immutable except for specific input/output blocks with some sort of synchronization method.
-  * Possibly some sort of step/phase indicator, where any dirty commands have to wait for all dirty commands from the previous step to finish. This is not necessary if steps are directly dependent on each other, only if indirectly (eg, IO on a variable)
+  * Possibly some sort of step/phase indicator, where any impure commands have to wait for all impure commands from the previous step to finish. This is not necessary if steps are directly dependent on each other, only if indirectly (eg, IO on a variable)
     * `sync` block that takes a value (eg, the result of a variable store, so it must be complete) and the code to then run? may complicate later editing since if new updates are added in the middle then any syncs would also have to be updated
-    * simple `step` or `sync` command that guarantees all prior dirty functions are done - can be graphical bars like a kanban board separating the sections when edited visually
+    * simple `step` or `sync` command that guarantees all prior impure functions are done - can be graphical bars like a kanban board separating the sections when edited visually
 * All lazily evaluated.
 * Blocks can have any number of strongly typed inputs and outputs.
 * Equally usable as text or graphical node setup.
