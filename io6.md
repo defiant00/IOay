@@ -10,6 +10,7 @@
 * Equally usable as text or graphical node setup.
   * Comment or special syntax to store visual node metadata as text, so existing text tools are fully supported.
 * Basic syntax is `label` `:` `data`
+* Split (only?) on whitespace, so identifiers can be `first-name` or `best!`. Will have to thoroughly investigate how this interacts with other symbols.
 
 ```
 # function to repeat each line in a file twice
@@ -43,4 +44,25 @@ eg:
 fn(x int, y int) -> void
 fn(x int) -> int
 fn(name str) -> (success bool, index int)
+```
+
+Possible fn syntax options:
+```
+no-return (val str) -> void
+/fn
+
+one-return: fn(first str, second int) -> int
+/fn
+
+multi: fn(first str, second int) -> (res1 str, res2 int)
+/fn
+multi: (first str, second int) -> (res1 str, res2 int)
+/fn
+multi: first str, second int -> res1 str, res2 int
+/fn
+
+# inline
+fn(x int, y int) => return x * y /fn
+(x int, y int) => x * y
+x int, y int => x * y
 ```
