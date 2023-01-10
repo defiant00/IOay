@@ -48,7 +48,7 @@ fn(name str) -> (success bool, index int)
 
 Possible fn syntax options:
 ```
-no-return (val str) -> void
+no-return: (val str) -> void
 /fn
 
 one-return: fn(first str, second int) -> int
